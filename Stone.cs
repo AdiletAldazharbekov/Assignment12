@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
-    class Stone : ObjectWithLocation
+    internal class Stone : ObjectWithLocation
     {
         public int Weight { get; private set; }
 

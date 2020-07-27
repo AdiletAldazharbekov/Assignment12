@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
-    class Forest
+    internal class Forest
     {
-        readonly static List<ObjectWithLocation> Objects = new List<ObjectWithLocation>();
-        readonly static List<LivingObject> LivingObjects = new List<LivingObject>();
+        private static readonly List<ObjectWithLocation> Objects = new List<ObjectWithLocation>();
+        private static readonly List<LivingObject> LivingObjects = new List<LivingObject>();
 
-        static void Main()
+        private static void Main()
         {
             // Populate forest
             var lake1 = new Lake(40, 40, 60, 60, 500);
@@ -38,19 +38,21 @@ namespace ConsoleApp1
                     case "next":
                         Continue();
                         break;
+
                     case "move":
                         var x = byte.Parse(Console.ReadLine());
                         var y = byte.Parse(Console.ReadLine());
 
                         animal1.Move(x, y);
                         break;
+
                     default:
                         break;
                 }
             }
         }
 
-        static void Continue()
+        private static void Continue()
         {
             Console.WriteLine("\nOne year later...\n");
 
@@ -60,7 +62,7 @@ namespace ConsoleApp1
             }
         }
 
-        static void Print()
+        private static void Print()
         {
             Console.WriteLine("Satus:\n");
 
@@ -76,5 +78,4 @@ namespace ConsoleApp1
             }
         }
     }
-
 }

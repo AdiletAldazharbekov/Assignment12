@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
-    class Lake : ObjectWithLocation
+    internal class Lake : ObjectWithLocation
     {
         public int Width { get; private set; }
         public int Length { get; private set; }

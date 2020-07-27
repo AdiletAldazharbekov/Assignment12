@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    class Bird : MovingObject
+    internal class Bird : MovingObject
     {
         public Tree HomeTree { get; private set; }
 

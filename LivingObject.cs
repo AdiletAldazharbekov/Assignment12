@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
-    abstract class LivingObject : ObjectWithLocation
+    internal abstract class LivingObject : ObjectWithLocation
     {
         public bool Alive { get; private set; } = true;
         public int Age { get; private set; } = 0;

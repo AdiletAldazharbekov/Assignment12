@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
-    abstract class MovingObject : LivingObject
+    internal abstract class MovingObject : LivingObject
     {
         public MovingObject(byte x, byte y) : base(x, y)
         { }

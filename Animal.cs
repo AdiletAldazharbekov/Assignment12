@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    class Animal : MovingObject
+    internal class Animal : MovingObject
     {
         public Animal(byte x, byte y) : base(x, y)
         { }
