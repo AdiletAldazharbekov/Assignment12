@@ -30,9 +30,9 @@ namespace ConsoleApp1
             while (true)
             {
                 Print();
-
+                Console.WriteLine("");
                 var input = Console.ReadLine();
-
+                
                 switch (input)
                 {
                     case "next":
@@ -42,8 +42,8 @@ namespace ConsoleApp1
                     case "move":
                         var x = byte.Parse(Console.ReadLine());
                         var y = byte.Parse(Console.ReadLine());
-
                         animal1.Move(x, y);
+                        
                         break;
 
                     default:
@@ -51,20 +51,10 @@ namespace ConsoleApp1
                 }
             }
         }
-
-        private static void Continue()
-        {
-            Console.WriteLine("\nOne year later...\n");
-
-            foreach (var obj in LivingObjects)
-            {
-                obj.Grow();
-            }
-        }
-
+     
         private static void Print()
         {
-            Console.WriteLine("Satus:\n");
+            Console.WriteLine("\tStatus:");
 
             foreach (var obj in Objects)
             {
@@ -73,8 +63,18 @@ namespace ConsoleApp1
 
             foreach (var obj in LivingObjects)
             {
-                Console.WriteLine($"{obj.GetType()}'s locations is {obj.Location}");
-                Console.WriteLine($"\tAlive? {obj.Alive}. Age: {obj.Age}");
+                Console.WriteLine($"{obj.GetType()}'s locations is {obj.Location}, "+
+                $"\tAlive? {obj.Alive}. Age: {obj.Age}");
+            }
+        }
+        
+        private static void Continue()
+        {
+            Console.WriteLine("\nOne year later...\n");
+
+            foreach (var obj in LivingObjects)
+            {
+                obj.Grow();
             }
         }
     }
