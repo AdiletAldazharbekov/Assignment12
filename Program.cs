@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1
+namespace Assignment12
 {
     internal class Forest
     {
@@ -21,10 +21,12 @@ namespace ConsoleApp1
 
             var animal1 = new Animal(3, 4);
             var bird1 = new Bird(1, 20);
+            var insects = new Insects(2, 6);
 
             LivingObjects.Add(tree1);
             LivingObjects.Add(animal1);
             LivingObjects.Add(bird1);
+            LivingObjects.Add(insects);
 
             // Forest commands
             while (true)
@@ -32,7 +34,7 @@ namespace ConsoleApp1
                 Print();
                 Console.WriteLine("");
                 var input = Console.ReadLine();
-                
+
                 switch (input)
                 {
                     case "next":
@@ -44,7 +46,7 @@ namespace ConsoleApp1
                         var y = byte.Parse(Console.ReadLine());
                         animal1.Move(x, y);
                         bird1.Move(x, y);
-                        
+                        insects.Move(x, y);
                         break;
 
                     default:
@@ -52,7 +54,7 @@ namespace ConsoleApp1
                 }
             }
         }
-     
+
         private static void Print()
         {
             Console.WriteLine("\tStatus:");
@@ -64,11 +66,11 @@ namespace ConsoleApp1
 
             foreach (var obj in LivingObjects)
             {
-                Console.WriteLine($"{obj.GetType()}'s locations is {obj.Location}, "+
+                Console.WriteLine($"{obj.GetType()}'s locations is {obj.Location}, " +
                 $"\tAlive? {obj.Alive}. Age: {obj.Age}");
             }
         }
-        
+
         private static void Continue()
         {
             Console.WriteLine("\nOne year later...\n");

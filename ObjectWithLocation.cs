@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace Assignment12
 {
     internal abstract class ObjectWithLocation
     {
