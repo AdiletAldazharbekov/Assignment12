@@ -12,5 +12,11 @@ namespace ConsoleApp1
             if (Math.Abs(Location.x - x) <= 1 && Math.Abs(Location.y - y) <= 1)
                 base.Move(x, y);
         }
+
+        public override void Grow()
+        {
+            if (Age < 10) base.Grow();
+            else Die();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp1
+﻿using System;
+
+namespace ConsoleApp1
 {
     internal class Bird : MovingObject
     {
@@ -9,9 +11,15 @@
 
         public void Nest(Tree tree) => HomeTree = tree;
 
+        public new void Move(byte x, byte y)
+        {
+            if (Math.Abs(Location.x - x) <= 3 && Math.Abs(Location.y - y) <= 3)
+                base.Move(x, y);
+        }
+
         public override void Grow()
         {
-            if (Age < 5) base.Grow();
+            if (Age < 10) base.Grow();
             else Die();
         }
     }

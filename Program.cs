@@ -43,6 +43,7 @@ namespace ConsoleApp1
                         var x = byte.Parse(Console.ReadLine());
                         var y = byte.Parse(Console.ReadLine());
                         animal1.Move(x, y);
+                        bird1.Move(x, y);
                         
                         break;
 
